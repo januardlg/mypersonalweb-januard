@@ -20,9 +20,9 @@ export const Navbar = () => {
 
   return (
     <div className="h-[72px] bg-[#F4F6F7] flex items-center px-40 justify-end sticky top-0">
-      <div className="flex items-center">
+      <div className="flex items-center space-x-8">
         {NAVBAR_MENUS.map((menu, id) => (
-          <div key={id} className="px-8 font-medium text-[#18191F] text-base cursor-pointer">
+          <div key={id} className="font-medium text-[#18191F] text-base cursor-pointer">
             {menu.label}
           </div>
         ))}
