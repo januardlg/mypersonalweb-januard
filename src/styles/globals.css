@@ -16,6 +16,10 @@
   }
 }
 
+.section-container {
+  @apply h-[calc(100vh-72px)];
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   /* background: linear-gradient(

@@ -15,7 +15,7 @@ import { PiArrowUpRightBold } from "react-icons/pi";
 
 export const GreetingSection = () => {
   return (
-    <div className="h-screen">
+    <div className="bg-[#F4F6F7] section-container">
       <div className="h-full flex justify-center items-center space-x-16">
         <div>
           <p className="text-4xl leading-[58px]">Hey there,</p>

@@ -11,7 +11,7 @@ export interface ButtonProps
 
 export const Button = (props: ButtonProps) => {
   return (
-    <div className="px-9 py-4 rounded-lg flex items-center bg-[#2A2C32] text-white space-x-1">
+    <div className="px-9 py-4 rounded-lg flex items-center bg-[#2A2C32] text-white space-x-1 cursor-pointer">
       {props.children}
       {props.icon}
     </div>
