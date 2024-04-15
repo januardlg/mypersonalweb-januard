@@ -14,14 +14,14 @@ export const Stepper = ({
         <div className="text-2xl font-bold">{experience.companyName}</div>
         <div className="mt-1">{experience.duration}</div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center h-full">
         <div>
           <div className="stepper-container">
             <Circle />
           </div>
           {!isLast && (
-            <div className="stepper-container py-4">
-              <div className="w-[2px] bg-[#566177] min-h-[112px]"></div>
+            <div className="stepper-container py-4 h-full pb-10">
+              <div className="w-[2px] bg-[#566177]"></div>
             </div>
           )}
         </div>
@@ -39,6 +39,7 @@ export const Stepper = ({
         ) : (
           <div className="mt-1">{experience.jobDescs[0].keterangan}</div>
         )}
+        <div className="h-[82px]" />
       </div>
     </div>
   );
