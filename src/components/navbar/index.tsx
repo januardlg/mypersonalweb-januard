@@ -19,7 +19,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="h-[72px] bg-[#F4F6F7] flex items-center px-40 justify-end sticky top-0">
+    <div className="h-[72px] bg-[#F4F6F7] flex items-center px-40 justify-end sticky top-0 z-20">
       <div className="flex items-center space-x-8">
         {NAVBAR_MENUS.map((menu, id) => (
           <div key={id} className="font-medium text-[#18191F] text-base cursor-pointer">

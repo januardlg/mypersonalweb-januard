@@ -20,6 +20,10 @@
   @apply h-[calc(100vh-72px)];
 }
 
+.stepper-container {
+  @apply w-8 flex justify-center;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   /* background: linear-gradient(
