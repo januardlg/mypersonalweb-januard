@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-import { ExperienceSection, GreetingSection, IntroductionSection } from '@/container'
+import { ExperienceSection, GreetingSection, IntroductionSection, PortofolioSection } from '@/container'
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <GreetingSection />
       <IntroductionSection />
       <ExperienceSection />
+      <PortofolioSection />
     </main>
   )
 }
