@@ -10,13 +10,13 @@ export const PortofolioSection = () => {
 
   return (
     <div ref={portofolioRef} className="section-container">
-      <div className="flex h-full w-full overflow-y-scroll">
-        {[0,1].map((data: any) => (
+      {/* <div className="flex h-full w-full overflow-y-scroll"> */}
+        {[0,1,2].map((data: any, index: number) => (
           <div key={data} className="h-full">
-            <PortofolioContent />
+            <PortofolioContent isOdd={ index % 2 === 1 } />
           </div>
         ))}
-      </div>
+      {/* </div> */}
     </div>
   );
 };
