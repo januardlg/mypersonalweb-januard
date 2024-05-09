@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { FaCode } from "react-icons/fa6";
+
+import { AppContext } from "@/pages/_app";
 
 import Image from "next/image";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -12,10 +14,14 @@ import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoLinkedin } from "react-icons/io";
 import { Button } from "@/components";
 import { PiArrowUpRightBold } from "react-icons/pi";
+import { AppContextType } from "@/pages/app";
 
 export const GreetingSection = () => {
+
+  const {greetingRef} = useContext(AppContext) as AppContextType
+
   return (
-    <div className="bg-[#F4F6F7] section-container">
+    <div ref={greetingRef} className="bg-[#F4F6F7] section-container">
       <div className="h-full flex justify-center items-center space-x-16">
         <div>
           <p className="text-4xl leading-[58px]">Hey there,</p>
@@ -36,7 +42,9 @@ export const GreetingSection = () => {
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <Button icon={<PiArrowUpRightBold size={20} color="white" />}><p className="text-lg font-bold">Resume</p></Button>
+            <Button icon={<PiArrowUpRightBold size={20} color="white" />}>
+              <p className="text-lg font-bold">Resume</p>
+            </Button>
             <BiLogoInstagramAlt size={48} color="#2A2C32" />
             <IoLogoLinkedin size={48} color="#2A2C32" />
           </div>

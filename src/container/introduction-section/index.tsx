@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
+
+import { AppContext } from "@/pages/_app";
 
 import { IBiodatas } from "./biodatas";
 import { MdEmail } from "react-icons/md";
@@ -16,8 +18,12 @@ import BootstrapIcon from "../../../public/icons/bootstrap-icon.png";
 import TailwindIcon from "../../../public/icons/tailwind-icon.png";
 import { SliderCarousel } from "@/components";
 import { IStacksList } from "@/components/slider-carousel/stakcsList";
+import { AppContextType } from "@/pages/app";
 
 export const IntroductionSection = () => {
+
+  const {introductionRef} = useContext(AppContext) as AppContextType
+  
   const BIODATAS: Array<IBiodatas> = [
     {
       label: "Phone",
@@ -103,7 +109,7 @@ export const IntroductionSection = () => {
   ];
 
   return (
-    <div className="bg-[#1F242C] py-24 px-40 text-white ">
+    <div ref={introductionRef} className="bg-[#1F242C] py-24 px-40 text-white ">
       <div className="font-bold text-[32px]">Januard Pardo Lumbangaol</div>
       <div className="mt-2 text-xl leading-7">
         With more than two years of hands-on experience as a Frontend Developer,

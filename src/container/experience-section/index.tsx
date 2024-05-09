@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Stepper } from "@/components";
 import { IWorkingExperience } from "./experinces";
+import { AppContext } from "@/pages/_app";
+import { AppContextType } from "@/pages/app";
+
 
 export const ExperienceSection = () => {
+
+  const {experienceRef} = useContext(AppContext) as AppContextType
+
   const WORKING_EXPERIENCES: Array<IWorkingExperience> = [
     {
       id: 0,
@@ -63,7 +69,7 @@ export const ExperienceSection = () => {
   ];
 
   return (
-    <div className="bg-[#F4F6F7] section-container py-24 px-40">
+    <div ref={experienceRef} className="bg-[#F4F6F7] section-container py-24 px-40">
       {WORKING_EXPERIENCES.map((experience, index) => (
         <Stepper
           key={`experience-${experience.id}`}
