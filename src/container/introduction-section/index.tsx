@@ -7,18 +7,9 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa";
 import { ICertification } from "./certification";
 
-import HTMLIcon from '../../../public/icons/html-icon.png'
-import CSSIcon from "../../../public/icons/css-icon.png";
-import JavascriptIcon from "../../../public/icons/javascript-icon.png";
-import TypescriptIcon from "../../../public/icons/typescript-icon.png";
-import ReactIcon from "../../../public/icons/react-icon.png";
-// import NextIcon from "../../../public/icons/next-icon.png";
-import NextIcon from "../../../public/icons/nextjs-icon.png";
-import BootstrapIcon from "../../../public/icons/bootstrap-icon.png";
-import TailwindIcon from "../../../public/icons/tailwind-icon.png";
 import { SliderCarousel } from "@/components";
-import { IStacksList } from "@/components/slider-carousel/stakcsList";
 import { AppContextType } from "@/pages/app";
+import { STACKS_LOGOS } from "@/data-master/data-master";
 
 export const IntroductionSection = () => {
 
@@ -65,48 +56,6 @@ export const IntroductionSection = () => {
     },
   ];
 
-  const STACKS_LOGOS: Array<IStacksList> = [
-    {
-      id: 1,
-      alt: "HTML5",
-      src: HTMLIcon,
-    },
-    {
-      id: 2,
-      alt: "CSS3",
-      src: CSSIcon,
-    },
-    {
-      id: 3,
-      alt: "Javascript",
-      src: JavascriptIcon,
-    },
-    {
-      id: 4,
-      alt: "Typescript",
-      src: TypescriptIcon,
-    },
-    {
-      id: 5,
-      alt: "ReactJS",
-      src: ReactIcon,
-    },
-    {
-      id: 6,
-      alt: "NextJS",
-      src: NextIcon,
-    },
-    {
-      id: 7,
-      alt: "Bootstrap",
-      src: BootstrapIcon,
-    },
-    {
-      id: 8,
-      alt: "Tailwind",
-      src: TailwindIcon,
-    },
-  ];
 
   return (
     <div ref={introductionRef} className="bg-[#1F242C] py-24 px-40 text-white ">

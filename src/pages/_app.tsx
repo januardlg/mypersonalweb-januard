@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   const handleScrolMain = () => {
-    const sectionHeight : number = greetingRef.current.clientHeight + introductionRef.current.clientHeight + experienceRef.current.clientHeight 
+    const sectionHeight : number = greetingRef?.current.clientHeight + introductionRef?.current.clientHeight + experienceRef?.current.clientHeight 
     if(sectionHeight === Math.round( window.scrollY)){
       console.log('rechhhh')
     }

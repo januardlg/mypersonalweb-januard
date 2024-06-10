@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import { PortofolioContent } from "@/components";
 import { AppContextType } from "@/pages/app";
 import { AppContext } from "@/pages/_app";
+import { PORTOFOLIO_DATAS } from "@/data-master/data-master";
+import { IPortolioData } from "@/data-master/data-mater";
 
 export const PortofolioSection = () => {
 
@@ -11,9 +13,9 @@ export const PortofolioSection = () => {
   return (
     <div ref={portofolioRef} >
       {/* <div className="flex h-full w-full overflow-y-scroll"> */}
-        {[0,1,2].map((data: any, index: number) => (
-          <div key={data} className="section-container">
-            <PortofolioContent  key={data} isOdd={ index % 2 === 1 } />
+        {PORTOFOLIO_DATAS.map((portofolio : IPortolioData , index: number) => (
+          <div key={portofolio.id} className="section-container">
+            <PortofolioContent data={portofolio} isOdd={ index % 2 === 1 } />
           </div>
         ))}
       {/* </div> */}

@@ -42,7 +42,7 @@ export const GreetingSection = () => {
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <Button icon={<PiArrowUpRightBold size={20} color="white" />}>
+            <Button variant="Primary" icon={<PiArrowUpRightBold size={20} color="white" />}>
               <p className="text-lg font-bold">Resume</p>
             </Button>
             <BiLogoInstagramAlt size={48} color="#2A2C32" />

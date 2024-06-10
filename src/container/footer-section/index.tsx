@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 
 export const FooterSection = () => {
   return (
-    <div className="flex justify-center py-14 items-center">
+    <div className="flex justify-center py-14 items-center bg-[#F4F6F7]">
       <div className="text-center">
         <p className="text-6xl font-semibold leading-[84px]">Get in Touch.</p>
         <p className="text-lg font-light">So that we can talk more </p>
