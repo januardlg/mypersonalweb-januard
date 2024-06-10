@@ -1,14 +1,12 @@
 import React, { useContext } from "react";
 
-import { FaCode } from "react-icons/fa6";
-
 import { AppContext } from "@/pages/_app";
 
 import Image from "next/image";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import profileImage from "../../../public/images/profile.png";
-import codeAnimation from "../../../public/animations/code-animation.json";
+import codeAnimation from "../../../public/animations/code-animation1.json";
 
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoLinkedin } from "react-icons/io";
