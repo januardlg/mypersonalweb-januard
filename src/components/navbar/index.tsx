@@ -7,14 +7,6 @@ export const Navbar = () => {
   const {greetingRef, introductionRef, experienceRef, portofolioRef} = useContext(AppContext) as AppContextType
 
   const handleScrollNavigation = (ref: any) => {
-
-    
-    // ref.current.scrollIntoView({
-    //   behavior: "smooth",
-    //   block: "nearest",
-    //   inline: "start",
-    //   top: 72
-    // });
     const element = ref.current;
     const navbarHeight = 72
     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
@@ -23,8 +15,6 @@ export const Navbar = () => {
       top: elementPosition - navbarHeight,
       behavior: 'smooth',
     });
-
-    // window.scrollBy(0, -72);
   }
 
   const NAVBAR_MENUS = [
@@ -41,7 +31,7 @@ export const Navbar = () => {
       action: () => handleScrollNavigation(experienceRef),
     },
     {
-      label: "Projects",
+      label: "Portofolio",
       action: () => handleScrollNavigation(portofolioRef),
     },
   ];
