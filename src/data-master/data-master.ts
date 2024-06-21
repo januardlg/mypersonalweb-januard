@@ -127,12 +127,13 @@ export const WORKING_EXPERIENCES: Array<IWorkingExperience> = [
     jobDescs: [
       {
         id: 0,
-        keterangan: "Resolved bugs identified during internal testing and System Integration Testing (SIT) for client, CIMB Bank",
+        keterangan:
+          "Resolved bugs identified during internal testing and System Integration Testing (SIT) for CIMB Niaga Bank.",
       },
       {
         id: 1,
         keterangan:
-          "Develop component and UI for Virtual Account system for client, Victoria Bank",
+          "Develop components and UI for Victoria Bank Virtual Account system.",
       },
     ],
   },
@@ -191,7 +192,7 @@ export const PORTOFOLIO_DATAS: Array<IPortolioData> = [
 ];
 
 export const LINK_MASTER_DATA: ILinkData = {
-  CV: "https://drive.google.com/file/d/1-7o1PGeoAh8MJ4vZe3LyxupUk4EgkVwp/view?usp=sharing",
+  CV: "https://drive.google.com/file/d/1MssIZS1EujXJo0ThY40ol9978hN7rMsE/view?usp=sharing",
   LinkedIn: "https://www.linkedin.com/in/januardlg01/",
-  Github:'https://github.com/januard064'
+  Github: "https://github.com/januard064",
 };
