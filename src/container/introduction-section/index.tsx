@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 
 import { AppContext } from "@/pages/_app";
 
@@ -12,15 +12,9 @@ import { AppContextType } from "@/pages/app";
 import { STACKS_LOGOS } from "@/data-master/data-master";
 
 export const IntroductionSection = () => {
+  const { introductionRef } = useContext(AppContext) as AppContextType;
 
-  const {introductionRef} = useContext(AppContext) as AppContextType
-  
   const BIODATAS: Array<IBiodatas> = [
-    {
-      label: "Phone",
-      value: "081******687",
-      icon: <FaPhoneAlt fontSize={20} color="white" />,
-    },
     {
       label: "Email",
       value: "januargaol48@gmail.com",
@@ -56,7 +50,6 @@ export const IntroductionSection = () => {
     },
   ];
 
-
   return (
     <div ref={introductionRef} className="bg-[#1F242C] py-24 px-40 text-white ">
       <div className="font-bold text-[32px]">Januard Pardo Lumbangaol</div>
@@ -86,9 +79,9 @@ export const IntroductionSection = () => {
         </div>
       ))}
 
-    <div className=" mt-[82px] font-bold text-[32px]">Skill Stacks</div>
+      <div className=" mt-[82px] font-bold text-[32px]">Skill Stacks</div>
       <div className="mt-8">
-        <SliderCarousel contents={STACKS_LOGOS}  />
+        <SliderCarousel contents={STACKS_LOGOS} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect, createContext, useRef, useContext, createRef } from "react";
 import { AppContextType } from "./app";
+import Head from "next/head";
 
 export const AppContext = createContext<AppContextType | {}>({});
 
@@ -32,9 +33,16 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
+    <>
+      <Head>
+        <title>Januard Lumbangaol</title>
+        <link rel="icon" href="/coding.ico" sizes="any" />
+        <meta name="description" content="Januard Personal Web" />
+      </Head>
     <AppContext.Provider value={APP_CONTEXT}>
       <Navbar />
       <Component {...pageProps} />{" "}
     </AppContext.Provider>
+    </>
   );
 }

@@ -55,7 +55,7 @@ export const PortofolioContent: FunctionComponent<PortofolioContentType> = ({
                 <Link href={data?.repoLink} target="_blank">
                   <Button variant="Underline">Repository</Button>
                 </Link>
-                <Link href={data?.repoLink} target="_blank">
+                <Link href={data?.demoLink} target="_blank">
                   <Button variant="Underline">View Demo</Button>
                 </Link>
               </div>

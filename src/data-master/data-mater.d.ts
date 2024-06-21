@@ -21,3 +21,21 @@ export interface IStacksList {
     alt: string,
     src: StaticImageData
 }
+
+export interface ILinkData{
+    CV: string,
+    LinkedIn:string
+    Github: string
+}
+
+export interface IWorkingExperience {
+    id: number;
+    companyName: string;
+    duration: string;
+    position: string;
+    jobDescs: Array<{
+      id: number;
+      keterangan: string;
+    }>;
+  }
+  

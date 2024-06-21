@@ -1,22 +1,30 @@
+import Link from "next/link";
+import Image from "next/image";
 import React, { useContext } from "react";
 
 import { AppContext } from "@/pages/_app";
-
-import Image from "next/image";
-import { Player } from "@lottiefiles/react-lottie-player";
-
-import profileImage from "../../../public/images/profile.png";
-import codeAnimation from "../../../public/animations/code-animation1.json";
-
-import { BiLogoInstagramAlt } from "react-icons/bi";
-import { IoLogoLinkedin } from "react-icons/io";
-import { Button } from "@/components";
-import { PiArrowUpRightBold } from "react-icons/pi";
 import { AppContextType } from "@/pages/app";
 
-export const GreetingSection = () => {
+// component
+import { Player } from "@lottiefiles/react-lottie-player";
 
-  const {greetingRef} = useContext(AppContext) as AppContextType
+// assets
+import profileImage from "../../../public/images/profile.png";
+import codeAnimation from "../../../public/animations/code-animation1.json";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { IoLogoLinkedin } from "react-icons/io";
+import { PiArrowUpRightBold } from "react-icons/pi";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+
+// component
+import { Button } from "@/components";
+
+// master data
+import { LINK_MASTER_DATA } from "@/data-master/data-master";
+
+export const GreetingSection = () => {
+  const { greetingRef } = useContext(AppContext) as AppContextType;
 
   return (
     <div ref={greetingRef} className="bg-[#F4F6F7] section-container">
@@ -40,11 +48,20 @@ export const GreetingSection = () => {
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <Button variant="Primary" icon={<PiArrowUpRightBold size={20} color="white" />}>
-              <p className="text-lg font-bold">Resume</p>
-            </Button>
-            <BiLogoInstagramAlt size={48} color="#2A2C32" />
-            <IoLogoLinkedin size={48} color="#2A2C32" />
+            <Link href={LINK_MASTER_DATA.CV} target="_blank">
+              <Button
+                variant="Primary"
+                icon={<PiArrowUpRightBold size={20} color="white" />}
+              >
+                <p className="text-lg font-bold">Resume</p>
+              </Button>
+            </Link>
+            <Link href={LINK_MASTER_DATA.LinkedIn} target="_blank">
+              <IoLogoLinkedin size={48} color="#2A2C32" />
+            </Link>
+            <Link href={LINK_MASTER_DATA.Github} target="_blank">
+              <FaGithubSquare size={42} color="#2A2C32" />
+            </Link>
           </div>
         </div>
         <div>

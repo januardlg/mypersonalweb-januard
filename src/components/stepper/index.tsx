@@ -1,4 +1,4 @@
-import { IWorkingExperience } from "@/container/experience-section/experinces";
+import { IWorkingExperience } from "@/data-master/data-mater";
 import { Circle } from "../global/circle";
 
 export const Stepper = ({
@@ -29,17 +29,17 @@ export const Stepper = ({
       <div className="col-span-8">
         <div className="text-2xl font-bold">{experience.position}</div>
         {experience.jobDescs.length > 1 ? (
-          <>
-            <ul className="list-disc pl-4">
-              {experience.jobDescs.map((jobDesc) => (
-                <li key={`jobDesc-${jobDesc.id}`} className="leading-8">{jobDesc.keterangan}</li>
-              ))}
-            </ul>
-          </>
+          <ul className="list-disc pl-4">
+            {experience.jobDescs.map((jobDesc) => (
+              <li key={`jobDesc-${jobDesc.id}`} className="leading-8">
+                {jobDesc.keterangan}
+              </li>
+            ))}
+          </ul>
         ) : (
           <div className="mt-1">{experience.jobDescs[0].keterangan}</div>
         )}
-        <div className="h-[82px]" />
+        {isLast ? (<></>) : ( <div className="h-[82px]" />)}
       </div>
     </div>
   );

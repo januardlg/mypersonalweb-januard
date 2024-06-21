@@ -1,6 +1,10 @@
-import { IPortolioData } from "./data-mater";
-
-import { IStacksList } from "./data-mater";
+// imterface
+import {
+  IPortolioData,
+  IStacksList,
+  ILinkData,
+  IWorkingExperience,
+} from "./data-mater";
 
 import HTMLIcon from "../../public/icons/html-icon.png";
 import CSSIcon from "../../public/icons/css-icon.png";
@@ -12,7 +16,7 @@ import BootstrapIcon from "../../public/icons/bootstrap-icon.png";
 import TailwindIcon from "../../public/icons/tailwind-icon.png";
 
 import FoodRecipeImage from "../../public/images/portofolio/food-recipe.png";
-import TodoListImage from "../../public/images/portofolio/todo-list.png"
+import TodoListImage from "../../public/images/portofolio/todo-list.png";
 import NextCommerceImage from "../../public/images/portofolio/next-commerce.png";
 
 export const STACKS_LOGOS: Array<IStacksList> = [
@@ -55,6 +59,82 @@ export const STACKS_LOGOS: Array<IStacksList> = [
     id: 8,
     alt: "Tailwind",
     src: TailwindIcon,
+  },
+];
+
+export const WORKING_EXPERIENCES: Array<IWorkingExperience> = [
+  {
+    id: 0,
+    companyName: "Indosurya Life",
+    duration: "June 2020 - October 2020",
+    position: "Web Developer Intern",
+    jobDescs: [
+      {
+        id: 0,
+        keterangan: "Learn ASP.NET MVC monitored by supervisor",
+      },
+      {
+        id: 1,
+        keterangan:
+          "Analyze requirements and build intranet portal system using ASP.NET MVC",
+      },
+    ],
+  },
+  {
+    id: 1,
+    companyName: "Commsult Indonesia",
+    duration: "January 2022 - November 2023",
+    position: "Frontend Developer",
+    jobDescs: [
+      {
+        id: 0,
+        keterangan:
+          "Build new features and implement design changes for web based logistic management applications using React.js, Material-UI, and Here Maps API. ",
+      },
+      {
+        id: 1,
+        keterangan:
+          "Develop PWA(Progressive Web Application) interface for the ETA system using React.js.",
+      },
+      {
+        id: 2,
+        keterangan: "Resolve Frontend related issues.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    companyName: "Terralogiq Integrasi Solusi",
+    duration: "November 2023 - February 2024",
+    position: "Frontend Developer",
+    jobDescs: [
+      {
+        id: 0,
+        keterangan: "Develop CMS for Tapera Digital Service",
+      },
+      {
+        id: 1,
+        keterangan:
+          "Housing Application System for Stok Rumah Tapera using Typescript and Next.js",
+      },
+    ],
+  },
+  {
+    id: 3,
+    companyName: "Infosys Solusi Terpadu",
+    duration: "March 2024 - present",
+    position: "Frontend Developer",
+    jobDescs: [
+      {
+        id: 0,
+        keterangan: "Resolved bugs identified during internal testing and System Integration Testing (SIT) for client, CIMB Bank",
+      },
+      {
+        id: 1,
+        keterangan:
+          "Develop component and UI for Virtual Account system for client, Victoria Bank",
+      },
+    ],
   },
 ];
 
@@ -109,3 +189,9 @@ export const PORTOFOLIO_DATAS: Array<IPortolioData> = [
     portofolioImageUrl: NextCommerceImage,
   },
 ];
+
+export const LINK_MASTER_DATA: ILinkData = {
+  CV: "https://drive.google.com/file/d/1-7o1PGeoAh8MJ4vZe3LyxupUk4EgkVwp/view?usp=sharing",
+  LinkedIn: "https://www.linkedin.com/in/januardlg01/",
+  Github:'https://github.com/januard064'
+};
