@@ -8,14 +8,14 @@ import { AppContextType } from "@/pages/app";
 // component
 import { Player } from "@lottiefiles/react-lottie-player";
 
+import clsx from "clsx";
+
 // assets
 import profileImage from "../../../public/images/profile.png";
 import codeAnimation from "../../../public/animations/code-animation1.json";
-import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoLinkedin } from "react-icons/io";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import { FaGithubSquare } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
 
 // component
 import { Button } from "@/components";
@@ -28,7 +28,12 @@ export const GreetingSection = () => {
 
   return (
     <div ref={greetingRef} className="bg-[#F4F6F7] section-container">
-      <div className="h-full w-full p-4 block items-center space-y-10 sm:flex sm:justify-center sm:space-x-16 sm:space-y-0 ">
+      <div
+        className={clsx(
+          "h-full w-full p-4 block items-center space-y-10  ",
+          "sm:flex sm:justify-center sm:space-x-16 sm:space-y-0"
+        )}
+      >
         <div className="greeting-content h-[50%] sm:h-full">
           <div>
             <p className="text-4xl leading-[58px]">Hey there,</p>
@@ -36,10 +41,15 @@ export const GreetingSection = () => {
               I’m Januard Lumbangaol,
             </p>
             <div className="flex items-center relative mt-[-10px]">
-              <p className="text-2xl font-bold leading-[58px] flex items-center absolute z-10 sm:text-4xl">
+              <p
+                className={clsx(
+                  "text-2xl font-bold leading-[58px] flex items-center absolute z-10",
+                  " sm:text-4xl"
+                )}
+              >
                 Frontend Developer
               </p>
-              <div className="ml-[172px] sm:ml-[280px] mt-3">
+              <div className={clsx("ml-[172px]  mt-3", "sm:ml-[280px]")}>
                 <Player
                   src={codeAnimation}
                   autoplay
@@ -66,13 +76,13 @@ export const GreetingSection = () => {
             </div>
           </div>
         </div>
-        <div className="greeting-content h-[50%] sm:h-full">
+        <div className={clsx("greeting-content h-[50%]", "sm:ml-[280px]")}>
           <div>
             <Image
               src={profileImage}
               width={507}
               height={401}
-              alt="inage-profile"
+              alt="image-profile"
             />
           </div>
         </div>

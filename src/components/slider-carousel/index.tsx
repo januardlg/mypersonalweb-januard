@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IStacksList } from "./stakcsList";
 
-export const SliderCarousel = ({contents}:{contents: Array<IStacksList>}) => {
+// context
+import { AppContext } from "@/pages/_app";
+
+// interface
+import { AppContextType } from "@/pages/app";
+
+export const SliderCarousel = ({
+  contents,
+}: {
+  contents: Array<IStacksList>;
+}) => {
+  const { isMobile } = useContext(AppContext) as AppContextType;
   const settings = {
     // dots: true,
     infinite: true,
-    slidesToShow: 7,
+    slidesToShow: isMobile ? 2 : 7,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,

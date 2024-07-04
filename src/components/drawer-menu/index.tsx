@@ -3,6 +3,9 @@ import clsx from "clsx";
 
 import { IoCloseSharp } from "react-icons/io5";
 
+// interface
+import { INavbarMenuInterface } from "../navbar/navbar";
+
 const openClassNames: any = {
   top: "translate-y-0",
 };
@@ -56,15 +59,20 @@ export const DrawerMenu = ({
 
               <div className="flex justify-center items-center h-full">
                 <div className="space-y-4">
-                  {navbarMenu.map((menu, id) => (
-                    <div
-                      key={id}
-                      className="font-medium text-white text-base cursor-pointer text-center"
-                      onClick={menu.action}
-                    >
-                      {menu.label}
-                    </div>
-                  ))}
+                  {navbarMenu.map(
+                    (menu: INavbarMenuInterface, index: number) => (
+                      <div
+                        key={index}
+                        className="font-medium text-white text-base cursor-pointer text-center"
+                        onClick={() => {
+                          menu.action();
+                          handleOpenDrawerMenu();
+                        }}
+                      >
+                        {menu.label}
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>

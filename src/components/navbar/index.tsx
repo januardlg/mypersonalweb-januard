@@ -3,12 +3,16 @@ import { AppContext } from "@/pages/_app";
 import { AppContextType } from "@/pages/app";
 import { DrawerMenu } from "../drawer-menu";
 import { GiHamburgerMenu } from "react-icons/gi";
+import clsx from "clsx";
+
+// interface
+import { INavbarMenuInterface } from "./navbar";
 
 export const Navbar = () => {
   const { greetingRef, introductionRef, experienceRef, portofolioRef } =
     useContext(AppContext) as AppContextType;
 
-  const [isOpenDrawer, setIsOpenDrawerMenu] = useState<boolean>(false);
+  const [isOpenDrawerMenu, setIsOpenDrawerMenu] = useState<boolean>(false);
 
   const handleOpenDrawerMenu = () => {
     setIsOpenDrawerMenu((prevState) => !prevState);
@@ -26,7 +30,7 @@ export const Navbar = () => {
     });
   };
 
-  const NAVBAR_MENUS = [
+  const NAVBAR_MENUS: INavbarMenuInterface[] = [
     {
       label: "Home",
       action: () => handleScrollNavigation(greetingRef),
@@ -47,11 +51,16 @@ export const Navbar = () => {
 
   return (
     <div>
-      <div className="h-[72px] bg-[#F4F6F7] hidden items-center px-40 justify-end sticky top-0 z-20 sm:flex">
+      <div
+        className={clsx(
+          "h-[72px] bg-[#F4F6F7] hidden items-center px-40 justify-end sticky top-0 z-20 ",
+          "sm:flex"
+        )}
+      >
         <div className="flex items-center space-x-8">
-          {NAVBAR_MENUS.map((menu, id) => (
+          {NAVBAR_MENUS.map((menu: INavbarMenuInterface, index: number) => (
             <div
-              key={id}
+              key={index}
               className="font-medium text-[#18191F] text-base cursor-pointer"
               onClick={menu.action}
             >
@@ -60,11 +69,11 @@ export const Navbar = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-end bg-[#F4F6F7] p-4 sm:hidden">
-          <GiHamburgerMenu size={24} onClick={handleOpenDrawerMenu} />
+      <div className={clsx("flex justify-end bg-[#F4F6F7] p-4 ", "sm:hidden")}>
+        <GiHamburgerMenu size={24} onClick={handleOpenDrawerMenu} />
       </div>
       <DrawerMenu
-        open={isOpenDrawer}
+        open={isOpenDrawerMenu}
         handleOpenDrawerMenu={handleOpenDrawerMenu}
         navbarMenu={NAVBAR_MENUS}
       />

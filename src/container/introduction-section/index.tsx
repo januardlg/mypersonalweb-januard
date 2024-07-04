@@ -4,12 +4,14 @@ import { AppContext } from "@/pages/_app";
 
 import { IBiodatas } from "./biodatas";
 import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { ICertification } from "./certification";
 
 import { SliderCarousel } from "@/components";
 import { AppContextType } from "@/pages/app";
 import { STACKS_LOGOS } from "@/data-master/data-master";
+
+import clsx from "clsx";
 
 export const IntroductionSection = () => {
   const { introductionRef } = useContext(AppContext) as AppContextType;
@@ -51,7 +53,13 @@ export const IntroductionSection = () => {
   ];
 
   return (
-    <div ref={introductionRef} className="bg-[#1F242C] py-24 px-40 text-white ">
+    <div
+      ref={introductionRef}
+      className={clsx(
+        "bg-[#1F242C] py-[60px] px-[16px]  text-white ",
+        "sm:py-24 sm:px-40"
+      )}
+    >
       <div className="font-bold text-[32px]">Januard Pardo Lumbangaol</div>
       <div className="mt-2 text-xl leading-7">
         With more than two years of hands-on experience as a Frontend Developer,
@@ -61,7 +69,12 @@ export const IntroductionSection = () => {
         technologies. This approach ensures that I can readily adapt to new
         challenges and embrace emerging opportunities in this dynamic field.
       </div>
-      <div className="mt-6 flex justify-between items-center">
+      <div
+        className={clsx(
+          "mt-6 space-y-4",
+          "sm:flex sm:justify-between sm:items-center"
+        )}
+      >
         {BIODATAS.map((biodata, index) => (
           <div key={index} className="flex items-center space-x-4">
             {biodata.icon}
@@ -69,7 +82,9 @@ export const IntroductionSection = () => {
           </div>
         ))}
       </div>
-      <div className=" mt-[82px] font-bold text-[32px]">Certification</div>
+      <div className={clsx("mt-10 font-bold text-[32px]", "sm:mt-[82px] ")}>
+        Certification
+      </div>
       {CERTIFICATION.map((certifcation, index) => (
         <div key={certifcation.label + "" + index}>
           <div className="mt-6 font-bold">{certifcation.label}</div>
@@ -79,8 +94,10 @@ export const IntroductionSection = () => {
         </div>
       ))}
 
-      <div className=" mt-[82px] font-bold text-[32px]">Skill Stacks</div>
-      <div className="mt-8">
+      <div className={clsx("mt-[40px] font-bold text-[32px]", "sm:mt-[82px]")}>
+        Skill Stacks
+      </div>
+      <div className="mt-6">
         <SliderCarousel contents={STACKS_LOGOS} />
       </div>
     </div>
