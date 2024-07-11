@@ -3,6 +3,7 @@ import { LINK_MASTER_DATA } from "@/data-master/data-master";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import clsx from "clsx";
 
 export const FooterSection = () => {
   const router = useRouter();
@@ -10,7 +11,14 @@ export const FooterSection = () => {
   return (
     <div className="flex justify-center py-14 items-center bg-[#F4F6F7]">
       <div className="text-center">
-        <p className="text-6xl font-semibold leading-[84px]">Get in Touch.</p>
+        <p
+          className={clsx(
+            "text-6xl font-semibold leading-[84px] px-10",
+            "sm:px-0"
+          )}
+        >
+          Get in Touch.
+        </p>
         <p className="text-lg font-light">So that we can talk more </p>
         <div className="pt-14 flex justify-center items-center space-x-14">
           <MdEmail

@@ -50,7 +50,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <div>
+    <>
       <div
         className={clsx(
           "h-[72px] bg-[#F4F6F7] hidden items-center px-40 justify-end sticky top-0 z-20 ",
@@ -77,6 +77,6 @@ export const Navbar = () => {
         handleOpenDrawerMenu={handleOpenDrawerMenu}
         navbarMenu={NAVBAR_MENUS}
       />
-    </div>
+    </>
   );
 };

@@ -46,7 +46,7 @@ export const Stepper = ({
         ) : (
           <div className="mt-1">{experience.jobDescs[0].keterangan}</div>
         )}
-        {isLast ? <></> : <div className="h-[82px]" />}
+        {isLast ? <></> : <div className={clsx("h-[40px]","sm:h-[82px]")} />}
       </div>
     </div>
   );
