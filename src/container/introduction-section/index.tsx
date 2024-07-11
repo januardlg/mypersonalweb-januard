@@ -56,7 +56,7 @@ export const IntroductionSection = () => {
     <div
       ref={introductionRef}
       className={clsx(
-        "bg-[#1F242C] py-[60px] px-[16px]  text-white ",
+        "bg-[#1F242C] py-[60px] px-4  text-white ",
         "sm:py-24 sm:px-40"
       )}
     >

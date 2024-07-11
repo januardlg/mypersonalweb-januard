@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,6 +17,17 @@ export const SliderCarousel = ({
   contents: Array<IStacksList>;
 }) => {
   const { isMobile } = useContext(AppContext) as AppContextType;
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // Return null on the first render
+  }
+
   const settings = {
     // dots: true,
     infinite: true,
