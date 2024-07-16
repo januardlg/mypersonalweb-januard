@@ -29,7 +29,7 @@ export const IntroductionSection = () => {
     },
     {
       label: "Github",
-      value: "januard064",
+      value: "januardlg",
       icon: <FaGithub fontSize={20} color="white" />,
     },
   ];

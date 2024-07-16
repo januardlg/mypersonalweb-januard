@@ -152,7 +152,7 @@ export const PORTOFOLIO_DATAS: Array<IPortolioData> = [
       },
     ],
     techStacks: [1, 2, 3, 5, 7],
-    repoLink: "https://github.com/januard064/Food-Recipes",
+    repoLink: "https://github.com/januardlg/Food-Recipes",
     demoLink: "https://food-recipes-mealdb.netlify.app/",
     portofolioImageUrl: FoodRecipeImage,
   },
@@ -168,7 +168,7 @@ export const PORTOFOLIO_DATAS: Array<IPortolioData> = [
       },
     ],
     techStacks: [1, 2, 3, 5, 7],
-    repoLink: "https://github.com/januard064/TodoList-ReactJs-Firebase",
+    repoLink: "https://github.com/januardlg/TodoList-ReactJs-Firebase",
     demoLink: "https://todolist-firebase.netlify.app/",
     portofolioImageUrl: TodoListImage,
   },
@@ -184,15 +184,15 @@ export const PORTOFOLIO_DATAS: Array<IPortolioData> = [
       },
     ],
     techStacks: [1, 2, 3, 6, 8],
-    repoLink: "https://github.com/januard064/ecommerce-next",
+    repoLink: "https://github.com/januardlg/ecommerce-next",
     demoLink:
-      "https://ecommerce-next-jsov-3d17-hebrlclb7-januard064s-projects.vercel.app/",
+      "https://ecommerce-next-jsov-3d17-hebrlclb7-januardlgs-projects.vercel.app/",
     portofolioImageUrl: NextCommerceImage,
   },
 ];
 
 export const LINK_MASTER_DATA: ILinkData = {
-  CV: "https://drive.google.com/file/d/1MssIZS1EujXJo0ThY40ol9978hN7rMsE/view?usp=sharing",
+  CV: "https://drive.google.com/file/d/17hWsfA_E8c4hTl1I3FVS0kskSgaiLKV0/view?usp=sharing",
   LinkedIn: "https://www.linkedin.com/in/januardlg01/",
-  Github: "https://github.com/januard064",
+  Github: "https://github.com/januardlg",
 };
