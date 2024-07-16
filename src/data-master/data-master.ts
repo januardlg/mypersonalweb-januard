@@ -186,7 +186,7 @@ export const PORTOFOLIO_DATAS: Array<IPortolioData> = [
     techStacks: [1, 2, 3, 6, 8],
     repoLink: "https://github.com/januardlg/ecommerce-next",
     demoLink:
-      "https://ecommerce-next-jsov-3d17-hebrlclb7-januardlgs-projects.vercel.app/",
+      "https://ecommerce-next-jsov.vercel.app/",
     portofolioImageUrl: NextCommerceImage,
   },
 ];
