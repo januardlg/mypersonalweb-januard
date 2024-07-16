@@ -20,12 +20,12 @@ export const Navbar = () => {
 
   const handleScrollNavigation = (ref: any) => {
     const element = ref.current;
-    const navbarHeight = 72;
+    const navbarHeight = document?.getElementById('navbar-desktop')?.clientHeight;
     const elementPosition =
       element.getBoundingClientRect().top + window.scrollY;
 
     window.scrollTo({
-      top: elementPosition - navbarHeight,
+      top: elementPosition - (navbarHeight || 0),
       behavior: "smooth",
     });
   };
@@ -51,7 +51,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div
+      <div id="navbar-desktop"
         className={clsx(
           "h-[72px] bg-[#F4F6F7] hidden items-center px-40 justify-end sticky top-0 z-20 ",
           "sm:flex"
