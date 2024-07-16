@@ -1,5 +1,6 @@
 import { IWorkingExperience } from "@/data-master/data-mater";
 import { Circle } from "../global/circle";
+import clsx from "clsx";
 
 export const Stepper = ({
   experience,
@@ -10,7 +11,7 @@ export const Stepper = ({
 }) => {
   return (
     <div className="grid grid-cols-12 gap-0">
-      <div className="col-span-3">
+      <div className={clsx("hidden", "sm:block sm:col-span-3")}>
         <div className="text-2xl font-bold">{experience.companyName}</div>
         <div className="mt-1">{experience.duration}</div>
       </div>
@@ -26,8 +27,14 @@ export const Stepper = ({
           )}
         </div>
       </div>
-      <div className="col-span-8">
-        <div className="text-2xl font-bold">{experience.position}</div>
+      <div className={clsx("col-span-11 ml-5", "sm:ml-0 sm:col-span-8")}>
+        <div className={clsx("block col-span-3 mb-4", "sm:hidden")}>
+          <div className="text-2xl font-bold">{experience.companyName}</div>
+          <div className="mt-1">{experience.duration}</div>
+        </div>
+        <div className={clsx("text-xl font-bold", "sm:text-2xl")}>
+          {experience.position}
+        </div>
         {experience.jobDescs.length > 1 ? (
           <ul className="list-disc pl-4">
             {experience.jobDescs.map((jobDesc) => (
@@ -39,7 +46,7 @@ export const Stepper = ({
         ) : (
           <div className="mt-1">{experience.jobDescs[0].keterangan}</div>
         )}
-        {isLast ? (<></>) : ( <div className="h-[82px]" />)}
+        {isLast ? <></> : <div className={clsx("h-[40px]","sm:h-[82px]")} />}
       </div>
     </div>
   );

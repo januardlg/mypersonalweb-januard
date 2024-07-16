@@ -6,6 +6,12 @@
   @apply h-[calc(100vh-72px)];
 }
 
+.greeting-content{
+  display: flex;
+  align-items:center
+
+}
+
 .stepper-container {
   @apply w-8 flex justify-center;
 }
