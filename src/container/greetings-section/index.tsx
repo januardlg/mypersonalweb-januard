@@ -22,6 +22,7 @@ import { Button } from "@/components";
 
 // master data
 import { LINK_MASTER_DATA } from "@/data-master/data-master";
+import Typewriter from "@/components/typewriter";
 
 export const GreetingSection = () => {
   const { greetingRef } = useContext(AppContext) as AppContextType;
@@ -36,8 +37,9 @@ export const GreetingSection = () => {
       >
         <div className="greeting-content h-[50%] sm:h-full">
           <div>
-            <p className="text-4xl leading-[58px]">Hey there,</p>
-            <p className="text-5xl font-bold leading-[58px]">
+            {/* <p className="text-4xl leading-[58px]">Hey there,</p> */}
+            <Typewriter text="Hey there," />
+            <p className="text-5xl font-bold leading-[58px] mt-6">
               I’m Januard Lumbangaol,
             </p>
             <div className="flex items-center relative mt-[-10px]">
